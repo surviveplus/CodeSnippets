@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>IEnumerable&lt;T&gt; ForEach</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>Code snippet for a Extension method for IEnumerable&lt;T&gt;, that like List&lt;T&gt;.ForEach method.</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>
+      </Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="csharp" Delimiter="$"><![CDATA[	/// <summary>
+	/// Static class which is defined extension methods for IEnumerable&lt;T&gt;.
+	/// </summary>
+	public static partial class IEnumerableExtensions
+	{
+		/// <summary>
+		/// Performs the specified action on each element of the IEnumerable&lt;T&gt;, and return it.
+		/// </summary>
+		/// <param name="me">The instance of the type which is added this extension method.</param>
+		/// <param name="action">The Action&lt;T&gt; delegate to perform on each element of the List&lt;T&gt;.</param>
+		/// <returns>
+		/// Return the IEnumerable&lt;T&gt;.
+		/// </returns>
+		/// <exception cref="ArgumentNullException">action is null reference (Nothing in Visual Basic).</exception>
+		public static IEnumerable<T> ForEach<T>( this IEnumerable<T> me, Action<T> action ) {
+			if (me == null) throw new ArgumentNullException( "me" );
+			if (action == null) throw new ArgumentNullException( "action" );
+
+			if (action != null) {
+				foreach (var item in me) {
+					action( item );
+				}// next item
+			} // end if
+
+			return me;
+		} // end function
+	} // end class]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Recursion Lambda</Title>
+      <Shortcut>recursion</Shortcut>
+      <Description>ラムダ式による再帰呼び出し</Description>
+      <Author>Surviveplus.net</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <HelpUrl>
+      </HelpUrl>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>DirectoryInfo</ID>
+          <ToolTip>対象の型を指定します。</ToolTip>
+          <Default>System.IO.DirectoryInfo</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>target</ID>
+          <ToolTip>対象を指定する方法を指定してください。</ToolTip>
+          <Default>new System.IO.DirectoryInfo( System.Environment.GetFolderPath( Environment.SpecialFolder.Desktop ) )</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>action</ID>
+          <ToolTip>再帰的に実行したい処理を指定します。</ToolTip>
+          <Default>Console.WriteLine( folder.FullName );</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>folders</ID>
+          <ToolTip>子要素を抽出する方法を指定します。</ToolTip>
+          <Default>folder.GetDirectories()</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>varName</ID>
+          <ToolTip>変数名を指定します。</ToolTip>
+          <Default>targetFolder</Default>
+          <Function>
+          </Function>
+          <Type>
+          </Type>
+        </Object>
+        <Object Editable="true">
+          <ID>argName</ID>
+          <ToolTip>引数の名称を指定します。</ToolTip>
+          <Default>folder</Default>
+          <Function>
+          </Function>
+          <Type>
+          </Type>
+        </Object>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[			// 再帰呼び出しされるラムダ式
+			Action<$DirectoryInfo$, Action<$DirectoryInfo$>> recursion = null;
+			recursion = ( $argName$, exec ) =>
+			{
+				exec( $argName$ );
+
+				foreach (var item in $folders$) {
+					recursion( item, exec );
+				} // next item
+			};
+
+			// アクションを指定して再帰的に処理
+			var $varName$ = $target$;
+			recursion( $varName$, ( $argName$ ) =>
+			{
+				$action$$end$
+			} );]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

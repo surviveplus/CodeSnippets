@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Author>Surviveplus.net</Author>
+      <Description>Insert a code to verify the argument and throw the exception when it is not defined as the enumeration. This validating arguments isn't recommended. Use OutEnumEx instead.</Description>
+      <Shortcut>NotEnumEx</Shortcut>
+      <Title>Throw Exception when argument is not defined as the enumeration</Title>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <Default>EnumType</Default>
+          <ID>EnumType</ID>
+          <ToolTip>Replace with the type of the argument.</ToolTip>
+        </Literal>
+        <Literal Editable="true">
+          <Default>value</Default>
+          <ID>value</ID>
+          <ToolTip>Replace with the neme of the argument.</ToolTip>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[        ' This validating arguments isn't recommended. Use OutEnumEx instead. After due consideration of dangers, delete this comment to use it.
+        If System.Enum.IsDefined(GetType($EnumType$), $value$) = False Then Throw New ArgumentOutOfRangeException("sample", "Cannot provide what is not defined $EnumType$ enumeration.")
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

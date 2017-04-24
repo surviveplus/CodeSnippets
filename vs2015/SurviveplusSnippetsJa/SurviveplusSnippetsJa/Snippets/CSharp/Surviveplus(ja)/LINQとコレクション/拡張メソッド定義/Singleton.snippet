@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Singleton</Title>
+      <Shortcut></Shortcut>
+      <Description>インスタンス自身を要素として1つだけ返す列挙子を返す拡張メソッドを定義します。</Description>
+      <Author>Surviveplus.net</Author>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="csharp" Delimiter="$"><![CDATA[	/// <summary>
+	/// Object 型に対する拡張メソッドを定義する静的クラスです。
+	/// </summary>
+	public static partial class ObjectExtensions
+	{
+		/// <summary>
+		/// インスタンス自身を要素として1つだけ返す列挙子を返します。
+		/// </summary>
+		/// <typeparam name="T">要素の型</typeparam>
+		/// <param name="me">拡張メソッドを追加する元の型のオブジェクトです。null 参照 (Visual Basic では Nothing) を指定した時は、空の列挙子を返します。</param>
+		/// <returns>インスタンス自身を要素として1つだけ返す列挙子を返します。</returns>
+		/// <remarks>
+		/// <para>次のサンプルコードを実行すると、list は IEnumerable&lt;int&gt; となります。</para>
+		/// <code>
+		/// int a = 0;
+		/// var list = a.Singleton();
+		/// </code>
+		/// </remarks>
+		public static IEnumerable<T> Singleton<T>( this T me ) {
+
+			if (me != null) {
+				yield return me;
+			} // end if
+
+		} // end function
+	} // end class]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Recursion Lambda</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>Recursion Lambda</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>recursion</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>DirectoryInfo</ID>
+          <ToolTip>Replace with Type of the target</ToolTip>
+          <Default>System.IO.DirectoryInfo</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>target</ID>
+          <ToolTip>Replace with the specifiying the target.</ToolTip>
+          <Default>new System.IO.DirectoryInfo( System.Environment.GetFolderPath( Environment.SpecialFolder.Desktop ) )</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>action</ID>
+          <ToolTip>Replace with the action that will be called with recursion.</ToolTip>
+          <Default>Console.WriteLine( folder.FullName );</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>folders</ID>
+          <ToolTip>Replace with the way to extract the children elements of the target.</ToolTip>
+          <Default>folder.GetDirectories()</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>varName</ID>
+          <ToolTip>Replace with the name of the variable.</ToolTip>
+          <Default>targetFolder</Default>
+          <Function>
+          </Function>
+          <Type>
+          </Type>
+        </Object>
+        <Object Editable="true">
+          <ID>argName</ID>
+          <ToolTip>Replace with the name of the argument.</ToolTip>
+          <Default>folder</Default>
+          <Function>
+          </Function>
+          <Type>
+          </Type>
+        </Object>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[			// Recursion Lambda
+			Action<$DirectoryInfo$, Action<$DirectoryInfo$>> recursion = null;
+			recursion = ( $argName$, exec ) =>
+			{
+				exec( $argName$ );
+
+				foreach (var item in $folders$) {
+					recursion( item, exec );
+				} // next item
+			};
+
+			// Act with Recursion
+			var $varName$ = $target$;
+			recursion( $varName$, ( $argName$ ) =>
+			{
+				$action$$end$
+			} );]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

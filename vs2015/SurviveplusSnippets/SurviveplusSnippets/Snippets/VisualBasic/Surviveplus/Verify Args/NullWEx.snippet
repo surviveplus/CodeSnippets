@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Throw Exception when argument is white-space, the empty string or a null reference</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>Insert a code to verify the argument and throw the exception when it is white-space characters, the empty string or Nothing (a null reference in C#).Define the code of cleaning up in Dispose(ByVal disposing As Boolean) method.</Description>
+      <Shortcut>NullWEx</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>ArgumentName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of argument.</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[If String.IsNullOrWhiteSpace($ArgumentName$) Then Throw New ArgumentException("Cannot provide white-space characters, the empty string or Nothing (a null reference in C#) to $ArgumentName$.", "$ArgumentName$")]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

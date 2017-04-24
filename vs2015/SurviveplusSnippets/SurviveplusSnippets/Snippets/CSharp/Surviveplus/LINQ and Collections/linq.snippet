@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>LINQ</Title>
+			<Shortcut>linq</Shortcut>
+			<Description>Code snippet for LINQ</Description>
+			<Author>Surviveplus.net</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>result</ID>
+					<ToolTip>Replace with the a variable which is binded to the results. </ToolTip>
+					<Default>result</Default>
+				</Literal>
+				<Literal>
+					<ID>item</ID>
+					<ToolTip>Replace with the range variable for this query.</ToolTip>
+					<Default>item</Default>
+				</Literal>
+				<Literal>
+					<ID>items</ID>
+					<ToolTip>Replace with the data source variable for this query.</ToolTip>
+					<Default>items</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[
+var $result$ = 
+	from $item$ in $items$
+	select $end$$item$;]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

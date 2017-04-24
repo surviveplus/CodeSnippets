@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>DirectoryInfo Recursion</Title>
+      <Shortcut></Shortcut>
+      <Description>指定されたフォルダとサブフォルダを再帰的に処理する拡張メソッドを定義します。</Description>
+      <Author>Surviveplus.net</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="csharp" Delimiter="$"><![CDATA[	/// <summary>
+	/// System.IO.DirectoryInfo に対する拡張メソッドを定義する静的クラスです。
+	/// </summary>
+	public static partial class DirectoryInfoExtensions
+	{
+		/// <summary>
+		/// 指定されたフォルダとサブフォルダについて、指定された処理を再帰的に実行します。
+		/// </summary>
+		/// <param name="me">拡張メソッドを追加する元の型のオブジェクトです。</param>
+		/// <param name="act">フォルダに対して実行する処理を指定します。</param>
+		public static void Recursion( this System.IO.DirectoryInfo me, Action<System.IO.DirectoryInfo> act ) {
+			if (me == null) throw new ArgumentNullException( "me" );
+			if (act == null) throw new ArgumentNullException( "act" );
+
+			act( me );
+
+			foreach (var d in me.GetDirectories()) {
+				d.Recursion( act );
+			} // next d
+
+		} // end function
+	} // end class
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

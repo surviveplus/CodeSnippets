@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="D7E50845-839A-4C80-8D90-4262C07E16A6" Version="1.10.6.1" Language="en-US" Publisher="Surviveplus.net" />
+    <DisplayName>Surviveplus Code Snippets</DisplayName>
+    <Description xml:space="preserve">Some code snippets for Visual Studio 2012, 2013 &amp; 2015. It is used by Surviveplus.net developers team.</Description>
+    <MoreInfo>https://visualstudiogallery.msdn.microsoft.com/3ef091b7-7f59-4715-a4bd-b6c14d32c2eb</MoreInfo>
+    <Icon>SurviveplusSnippets-32.png</Icon>
+    <PreviewImage>SurviveplusSnippets-200.png</PreviewImage>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.Premium" />
+    <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.Ultimate" />
+  </Installation>
+  <Dependencies>
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="registry.pkgdef" />
+  </Assets>
+</PackageManifest>

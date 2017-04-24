@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>クラス</Title>
+			<Shortcut>classSurviveplus</Shortcut>
+			<Description>クラスに対するコード スニペット</Description>
+			<Author>Surviveplus.net</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>ClassName</ID>
+					<ToolTip>クラス名で置き換えます。</ToolTip>
+					<Default>ClassName</Default>
+				</Literal>
+				<Literal>
+					<ID>Explanation</ID>
+					<Type>String</Type>
+					<ToolTip>クラスの機能を表現するテキストで置き換えます。</ToolTip>
+					<Default>機能</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[/// <summary>
+    /// $Explanation$を司るクラスです。
+    /// </summary>
+    /// <remarks>
+    /// <para>変更履歴</para>
+    /// </remarks>
+    public class $ClassName$
+    {
+        $selected$$end$
+    } // end class]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

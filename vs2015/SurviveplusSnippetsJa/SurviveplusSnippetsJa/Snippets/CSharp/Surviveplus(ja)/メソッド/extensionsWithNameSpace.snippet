@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+      <Title>拡張メソッド（名前空間付き）</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>拡張メソッドを、名前空間とクラスと共に定義します。</Description>
+      <Shortcut>extensionsWithNameSpace</Shortcut>
+      <SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>namespace</ID>
+					<ToolTip>拡張メソッドを使用するために using を指定する名前空間を指定します。</ToolTip>
+					<Default>NameSpace</Default>
+				</Literal>
+				<Literal>
+					<ID>class</ID>
+					<ToolTip>拡張メソッドを定義する静的クラスの名称を指定します。</ToolTip>
+					<Default>MyExtensions</Default>
+				</Literal>
+        <Literal>
+          <ID>classType</ID>
+          <ToolTip>拡張メソッドを追加する元の型で置き換えます。</ToolTip>
+          <Default>String</Default>
+        </Literal>
+
+        <Literal>
+          <ID>resultType</ID>
+          <ToolTip>メソッドの戻り値の型で置き換えます。</ToolTip>
+          <Default>bool</Default>
+        </Literal>
+
+        <Literal>
+          <ID>arg1Type</ID>
+          <ToolTip>第1引数の型で置き換えます。</ToolTip>
+          <Default>string</Default>
+        </Literal>        
+        <Literal>
+          <ID>arg1Name</ID>
+          <ToolTip>第1引数の名前で置き換えます。</ToolTip>
+          <Default>arg1</Default>
+        </Literal>     
+        <Literal>
+          <ID>Explanation</ID>
+          <Type>String</Type>
+          <ToolTip>メソッドの機能を説明するテキストで置き換えます。</ToolTip>
+          <Default>処理を実行し、結果を取得します。</Default>
+        </Literal>
+        <Literal>
+          <ID>resultExplanation</ID>
+          <Type>String</Type>
+          <ToolTip>メソッドの戻り値を説明するテキストで置き換えます。</ToolTip>
+          <Default>処理に成功したときは True を返します。それ以外は False を返します。</Default>
+        </Literal>
+        <Literal>
+          <ID>arg1Explanation</ID>
+          <Type>String</Type>
+          <ToolTip>第1引数を表現するテキストで置き換えます。</ToolTip>
+          <Default>値</Default>
+        </Literal>
+				<Literal>
+					<ID>methodName</ID>
+					<ToolTip>メソッド名で置き換えます。</ToolTip>
+					<Default>Execute</Default>
+				</Literal>
+                
+			</Declarations>
+			<Code Language="csharp">
+<![CDATA[
+namespace $namespace$ {
+
+	/// <summary>
+	/// 拡張メソッドを定義する静的クラスです。
+	/// </summary>
+	public static class $class$ {
+
+		/// <summary>
+		/// $Explanation$
+		/// </summary>
+		/// <param name="me">拡張メソッドを追加する元の型のオブジェクトです。</param>
+		/// <param name="$arg1Name$">$arg1Explanation$を指定します。</param>
+		/// <returns>
+		/// $resultExplanation$
+		/// </returns>
+		public static $resultType$ $methodName$( this $classType$ me, $arg1Type$ $arg1Name$ ) {
+			if ( me == null ) throw new ArgumentNullException( "me" );
+
+			$end$throw new NotImplementedException();
+		} // end function
+	} // end class
+} // end namespace
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

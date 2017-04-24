@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Extension methods (with Namespace)</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>Code snippet for Extension methods with Namespace</Description>
+      <Shortcut>extensionsWithNameSpace</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>namespace</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the Namespace of using directive, to use this extension method.</ToolTip>
+          <Default>MyNameSpace</Default>
+        </Literal>
+		<Literal>
+			<ID>class</ID>
+    	      <Type>String</Type>
+      <ToolTip>Replace with the name of static class which is defined this extension method.</ToolTip>
+      <Default>MyExtensions</Default>
+		</Literal>
+
+        <Literal>
+          <ID>classType</ID>
+          <Type></Type>
+          <ToolTip>Replace with the type which is added this extension method.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+
+        <Literal>
+          <ID>resultType</ID>
+          <Type></Type>
+          <ToolTip>Replace with the Return Type.</ToolTip>
+          <Default>Boolean</Default>
+        </Literal>
+
+        <Literal>
+          <ID>arg1Type</ID>
+          <Type></Type>
+          <ToolTip>Replace with Type of the first argument.</ToolTip>
+          <Default>string</Default>
+        </Literal>        
+        <Literal>
+          <ID>arg1Name</ID>
+		<Type>String</Type>
+          <ToolTip>Replace with the name of the first argument.</ToolTip>
+          <Default>arg1</Default>
+        </Literal>     
+        <Literal>
+          <ID>Explanation</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with explanation for the method.</ToolTip>
+          <Default>Do something, and return something.</Default>
+        </Literal>
+        <Literal>
+          <ID>resultExplanation</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with explanation for the Return Type.</ToolTip>
+          <Default>Returns true if succeeded; otherwise returns false.</Default>
+        </Literal>
+        <Literal>
+          <ID>arg1Explanation</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with explanation for the first argument.</ToolTip>
+          <Default>Set something.</Default>
+        </Literal>
+				<Literal>
+					<ID>methodName</ID>
+		    	      <Type>String</Type>
+          <ToolTip>Replace with the name of method.</ToolTip>
+          <Default>Execute</Default>
+				</Literal>
+        
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[
+Namespace $namespace$
+    Public Module $class$
+
+        ''' <summary>
+        ''' $Explanation$
+        ''' </summary>
+        ''' <param name="this">The instance of the type which is added this extension method.</param>
+        ''' <param name="$arg1Name$">$arg1Explanation$</param>
+        ''' <returns>$resultExplanation$</returns>
+        ''' <remarks></remarks>
+        <Runtime.CompilerServices.Extension()> _
+        Public Function $methodName$(ByVal this As $classType$, ByVal $arg1Name$ As $arg1Type$) As $resultType$
+            If this Is Nothing Then Throw New ArgumentNullException("this")
+
+            Throw New NotImplementedException()
+        End Function
+    End Module
+End Namespace
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

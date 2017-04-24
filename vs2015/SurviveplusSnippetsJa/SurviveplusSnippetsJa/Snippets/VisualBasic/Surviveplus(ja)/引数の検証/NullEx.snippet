@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>引数が Nothing は例外</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>引数が Nothing (C# の場合は null 参照) かどうか検証し、例外をスローするコードを記述します。</Description>
+      <Shortcut>NullEx</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>ArgumentName</ID>
+          <Type>String</Type>
+          <ToolTip>引数の名称で置き換えます。</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[If $ArgumentName$ Is Nothing Then Throw New ArgumentNullException("$ArgumentName$")]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

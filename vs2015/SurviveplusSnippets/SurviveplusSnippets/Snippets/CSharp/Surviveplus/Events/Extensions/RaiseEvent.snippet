@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>RaiseEvent</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>Code snippet for a Extension method to call event without confirm that is not null reference.</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>
+      </Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="csharp" Delimiter="$"><![CDATA[	/// <summary>
+	/// Static class which is defined extension methods for EventHandler&lt;T&gt;.
+	/// </summary>
+	public static class EventHandlerExtensions
+	{
+		/// <summary>
+		/// Raise the event.
+		/// </summary>
+		/// <param name="me">The instance of the type which is added this extension method.</param>
+		/// <param name="sender">The source of the event.</param>
+		/// <param name="e">An System.EventArgs that contains the event data.</param>
+		public static void Raise<T>( this EventHandler<T> me, object sender, T e) where T:EventArgs{
+			if (me != null)  me( sender, e );
+		} // end function
+	} // end class]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

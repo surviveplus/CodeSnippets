@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>NativeMethods</Title>
+			<Shortcut>native</Shortcut>
+			<Description>Windows API 実装クラス</Description>
+			<Author>Surviveplus.net</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="csharp"><![CDATA[/// <summary>
+    /// プラットフォーム呼び出しサービスを使用してアンマネージ コードにアクセスするためのクラスです。
+    /// </summary>
+    internal  static class NativeMethods
+    {
+        #region Win32 API 定義
+
+        // TODO: ここに DllImport を記述します。（コード分析 CA1060 参照）
+        $selected$$end$
+
+        #endregion
+
+    } // end class]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

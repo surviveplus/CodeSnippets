@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="BCDA6627-5079-44D5-A2E3-32B5892C496A" Version="1.10.6.1" Language="ja-JP" Publisher="Surviveplus.net" />
+    <DisplayName>Surviveplus Code Snippets (Japanese)</DisplayName>
+    <Description xml:space="preserve">Surviveplus.net 開発チームが使用している Visual Studio 2012, 2013, 2015 用のコードスニペットです。このスニペットは日本語用で、他に英語用があります。</Description>
+    <MoreInfo>https://visualstudiogallery.msdn.microsoft.com/5b63f911-3383-412c-a85b-8b9af21c33b9</MoreInfo>
+    <Icon>SurviveplusSnippets-32.png</Icon>
+    <PreviewImage>SurviveplusSnippets-200.png</PreviewImage>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.Premium" />
+    <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.Ultimate" />
+  </Installation>
+  <Dependencies>
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="registry.pkgdef" />
+  </Assets>
+</PackageManifest>

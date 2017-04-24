@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+      <Title>Throw Exception when argument is not useful enumeration.</Title>
+      <Shortcut>outenumex</Shortcut>
+      <Description>Insert a code to verify the argument and throw the exception when it is not useful enumeration. </Description>
+      <Author>Surviveplus.net</Author>
+      <SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>value</ID>
+          <ToolTip>Replace with the neme of the argument. Input the same variable to the twice.</ToolTip>
+          <Default>value</Default>
+				</Literal>
+        <Literal>
+          <ID>value2</ID>
+          <ToolTip>Replace with the neme of the argument. Input the same variable to the twice.</ToolTip>
+          <Default>value</Default>
+        </Literal>        
+				<Literal Editable="false">
+					<ID>cases</ID>
+					<Function>GenerateSwitchCases($value$)</Function>
+					<Default>default:</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+  <![CDATA[#region Validating $value2$ argument
+  
+  // When it is useful enumeration, do nothing. Otherwise, throw exception.
+  switch ($value$)
+	{
+		$cases$ // TODO: Delete "default:" which is redundant, and delete "case" of which are not useful.
+				$end$
+		default:
+				throw new ArgumentOutOfRangeException("$value2$", "Cannot provide what is not supported enumeration.");
+
+}
+#endregion]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>NativeMethods</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>Windows API Definitions class</Description>
+      <Shortcut>native</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="VB" Kind="type decl"><![CDATA[''' <summary>
+    ''' Allows managed code to call unmanaged functions with Platform Invocation Services (PInvoke).
+    ''' </summary>
+    Friend NotInheritable Class NativeMethods
+
+#Region " Constructors (Can't initializes a new instance of the this class)"
+
+        Private Sub New()
+        End Sub
+
+#End Region
+
+#Region " Win32API Definitions "
+
+        ' TODO: Insert the code of Declare of DllImport. (see static code analysis CA1060)
+
+#End Region
+
+    End Class]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

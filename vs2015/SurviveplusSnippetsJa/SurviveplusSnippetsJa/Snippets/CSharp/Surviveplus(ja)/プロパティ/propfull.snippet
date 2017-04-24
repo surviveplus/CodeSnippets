@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+      <Title>プロパティ（バッキングフィールド）</Title>
+      <Shortcut>propfullSurviveplus</Shortcut>
+      <Description>バッキング フィールドを伴うプロパティを定義します。</Description>
+      <Author>Surviveplus.net</Author>
+      <SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+        <Literal>
+          <ID>PropertyName</ID>
+          <Type>String</Type>
+          <ToolTip>プロパティ名で置き換えます。</ToolTip>
+          <Default>NewProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>PropertyType</ID>
+          <Type>
+          </Type>
+          <ToolTip>プロパティの型で置き換えます。</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Literal>
+          <ID>Explanation</ID>
+          <Type>String</Type>
+          <ToolTip>プロパティの内容を表現するテキストで置き換えます。</ToolTip>
+          <Default>値</Default>
+        </Literal>
+      </Declarations>
+			<Code Language="csharp">
+        <![CDATA[/// <summary>
+        /// $PropertyName$ プロパティのバッキングフィールドです。
+        /// </summary>
+        private $PropertyType$ valueOf$PropertyName$;
+
+        /// <summary>
+        /// $Explanation$を取得または設定します。
+        /// </summary>
+        public $PropertyType$ $PropertyName$  {
+            get {
+                return this.valueOf$PropertyName$;
+            } // end get
+            set {
+                this.valueOf$PropertyName$ = value;
+            } // end set
+        } // end property$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+      <Title>Property (with Backing Field)</Title>
+      <Shortcut>propfullSurviveplus</Shortcut>
+      <Description>Code snippet for Property with backing field.</Description>
+      <Author>Surviveplus.net</Author>
+      <SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+        <Literal>
+          <ID>PropertyName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of this property.</ToolTip>
+          <Default>NewProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>PropertyType</ID>
+          <Type>
+          </Type>
+          <ToolTip>Replace with the Type of this property.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Literal>
+          <ID>Explanation</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with explanation for the functions of this property.</ToolTip>
+          <Default>the value of something</Default>
+        </Literal>
+      </Declarations>
+			<Code Language="csharp">
+        <![CDATA[/// <summary>
+        /// Backing field of $PropertyName$ property.
+        /// </summary>
+        private $PropertyType$ valueOf$PropertyName$;
+
+        /// <summary>
+        /// Gets or sets $Explanation$.
+        /// </summary>
+        public $PropertyType$ $PropertyName$  {
+            get {
+                return this.valueOf$PropertyName$;
+            } // end get
+            set {
+                this.valueOf$PropertyName$ = value;
+            } // end set
+        } // end property$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

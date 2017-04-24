@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>拡張メソッド</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>拡張メソッドを定義します。</Description>
+      <Shortcut>extensions</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>namespace</ID>
+          <Type>String</Type>
+          <ToolTip>拡張メソッドを使用するために Imports を指定する名前空間を指定します。</ToolTip>
+          <Default>MyNameSpace</Default>
+        </Literal>
+		<Literal>
+			<ID>class</ID>
+    	      <Type>String</Type>
+			<ToolTip>拡張メソッドを定義する静的クラスの名称を指定します。</ToolTip>
+			<Default>MyExtensions</Default>
+		</Literal>
+
+        <Literal>
+          <ID>classType</ID>
+          <Type></Type>
+          <ToolTip>拡張メソッドを追加する元の型で置き換えます。</ToolTip>
+          <Default>String</Default>
+        </Literal>
+
+        <Literal>
+          <ID>resultType</ID>
+          <Type></Type>
+          <ToolTip>メソッドの戻り値の型で置き換えます。</ToolTip>
+          <Default>Boolean</Default>
+        </Literal>
+
+        <Literal>
+          <ID>arg1Type</ID>
+          <Type></Type>
+          <ToolTip>第1引数の型で置き換えます。</ToolTip>
+          <Default>string</Default>
+        </Literal>        
+        <Literal>
+          <ID>arg1Name</ID>
+		<Type>String</Type>
+          <ToolTip>第1引数の名前で置き換えます。</ToolTip>
+          <Default>arg1</Default>
+        </Literal>     
+        <Literal>
+          <ID>Explanation</ID>
+          <Type>String</Type>
+          <ToolTip>メソッドの機能を説明するテキストで置き換えます。</ToolTip>
+          <Default>処理を実行し、結果を取得します。</Default>
+        </Literal>
+        <Literal>
+          <ID>resultExplanation</ID>
+          <Type>String</Type>
+          <ToolTip>メソッドの戻り値を説明するテキストで置き換えます。</ToolTip>
+          <Default>処理に成功したときは True を返します。それ以外は False を返します。</Default>
+        </Literal>
+        <Literal>
+          <ID>arg1Explanation</ID>
+          <Type>String</Type>
+          <ToolTip>第1引数を表現するテキストで置き換えます。</ToolTip>
+          <Default>値</Default>
+        </Literal>
+				<Literal>
+					<ID>methodName</ID>
+		    	      <Type>String</Type>
+					<ToolTip>メソッド名で置き換えます。</ToolTip>
+					<Default>Execute</Default>
+				</Literal>
+        
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[
+        ''' <summary>
+        ''' $Explanation$
+        ''' </summary>
+        ''' <param name="this">拡張メソッドを追加する元の型のオブジェクトです。</param>
+        ''' <param name="$arg1Name$">$arg1Explanation$を指定します。</param>
+        ''' <returns>$resultExplanation$</returns>
+        ''' <remarks></remarks>
+        <Runtime.CompilerServices.Extension()> _
+        Public Function $methodName$(ByVal this As $classType$, ByVal $arg1Name$ As $arg1Type$) As $resultType$
+            If this Is Nothing Then Throw New ArgumentNullException("this")
+
+            Throw New NotImplementedException()
+        End Function
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Author>Surviveplus.net</Author>
+      <Description>引数が使用できる列挙型かどうか検証し、例外をスローするコードを記述します。</Description>
+      <Shortcut>OutEnumEx</Shortcut>
+      <Title>引数が使用できない列挙体は例外</Title>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <Default>value</Default>
+          <ID>value</ID>
+          <ToolTip>引数の変数を指定します</ToolTip>
+        </Literal>
+        <Literal Editable="true">
+          <Default>EnumType.Value1, EnumType.Value2</Default>
+          <ID>EnumValues</ID>
+          <ToolTip>使用できる値を列挙します</ToolTip>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[        ' 引数 $value$ の検証
+        Select Case $value$
+            Case $EnumValues$
+                ' 使用できる値は何もしません。
+
+            Case Else
+                ' 使用できない値は例外をスローします。
+                Throw New ArgumentOutOfRangeException("$value$", "サポートされていない値を指定することは出来ません。")
+        End Select]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

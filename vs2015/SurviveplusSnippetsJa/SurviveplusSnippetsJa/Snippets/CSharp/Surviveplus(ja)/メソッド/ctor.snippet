@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+      <Title>コンストラクタ</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>コンストラクタを定義します。</Description>
+      <Shortcut>CtorSurviveplus</Shortcut>
+      <SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="false">
+					<ID>classname</ID>
+					<ToolTip>クラス名</ToolTip>
+					<Function>ClassName()</Function>
+					<Default>ClassNamePlaceholder</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+        <![CDATA[/// <summary>
+        /// $classname$ クラスの新しいインスタンスを初期化します。
+        /// </summary>
+        public $classname$() {
+          $end$
+        } // end constructor]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
