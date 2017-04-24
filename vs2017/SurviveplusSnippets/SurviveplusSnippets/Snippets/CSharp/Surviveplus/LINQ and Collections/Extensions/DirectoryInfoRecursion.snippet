@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>DirectoryInfo Recursion</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>Code snippet for a Extension method to do something to a specified folder and children folders with recursion.</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>
+      </Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="csharp" Delimiter="$"><![CDATA[	/// <summary>
+	/// Static class which is defined extension methods for System.IO.DirectoryInfo.
+	/// </summary>
+	public static partial class DirectoryInfoExtensions
+	{
+		/// <summary>
+		/// Do something to a specified folder and children folders with recursion.
+		/// </summary>
+		/// <param name="me">The instance of the type which is added this extension method.</param>
+		/// <param name="act">Set a action to do to a folder.</param>
+		public static void Recursion( this System.IO.DirectoryInfo me, Action<System.IO.DirectoryInfo> act ) {
+			if (me == null) throw new ArgumentNullException( "me" );
+			if (act == null) throw new ArgumentNullException( "act" );
+
+			act( me );
+
+			foreach (var d in me.GetDirectories()) {
+				d.Recursion( act );
+			} // next d
+
+		} // end function
+	} // end class
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

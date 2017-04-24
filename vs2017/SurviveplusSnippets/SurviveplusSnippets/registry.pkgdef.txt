@@ -1,0 +1,31 @@
+﻿// Visual Basic
+[$RootKey$\Languages\CodeExpansions\Basic\Paths]
+"SurviveplusSnippets"="$PackageFolder$\Snippets\VisualBasic\SurviveplusSnippets"
+
+// C++
+[$RootKey$\Languages\CodeExpansions\C/C++\Paths]
+"SurviveplusSnippets"="$PackageFolder$\Snippets\C++\SurviveplusSnippets"
+
+// C#
+[$RootKey$\Languages\CodeExpansions\CSharp\Paths]
+"SurviveplusSnippets"="$PackageFolder$\Snippets\CSharp\SurviveplusSnippets"
+
+// CSS
+[$RootKey$\Languages\CodeExpansions\CSS\Paths]
+"SurviveplusSnippets"="$PackageFolder$\Snippets\CSS\SurviveplusSnippets"
+
+// HTML
+[$RootKey$\Languages\CodeExpansions\HTML\Paths]
+"SurviveplusSnippets"="$PackageFolder$\Snippets\HTML\SurviveplusSnippets"
+
+// JavaScript
+[$RootKey$\Languages\CodeExpansions\JavaScript\Paths]
+"SurviveplusSnippets"="$PackageFolder$\Snippets\JavaScript\SurviveplusSnippets"
+
+// SQL
+[$RootKey$\Languages\CodeExpansions\SQL_SSDT\Paths]
+"SurviveplusSnippets"="$PackageFolder$\Snippets\SQL\SurviveplusSnippets"
+
+// XML
+[$RootKey$\Languages\CodeExpansions\XML\Paths]
+"SurviveplusSnippets"="$PackageFolder$\Snippets\XML\SurviveplusSnippets"

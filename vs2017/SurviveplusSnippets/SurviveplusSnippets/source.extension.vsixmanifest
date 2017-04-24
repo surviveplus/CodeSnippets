@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="73feb2cd-ac20-4646-afa8-bf9477fa2fa2" Version="1.10.6.1" Language="en-US" Publisher="Surviveplus.net" />
+    <DisplayName>Surviveplus Code Snippets for Visual Studio 2017</DisplayName>
+    <Description xml:space="preserve">Some code snippets for Visual Studio. It is used by Surviveplus.net developers team.</Description>
+    <MoreInfo>https://github.com/surviveplus/CodeSnippets</MoreInfo>
+    <Icon>SurviveplusSnippets-32.png</Icon>
+    <PreviewImage>SurviveplusSnippets-200.png</PreviewImage>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0]" />
+  </Installation>
+  <Dependencies>
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="registry.pkgdef" />
+  </Assets>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,16.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+</PackageManifest>

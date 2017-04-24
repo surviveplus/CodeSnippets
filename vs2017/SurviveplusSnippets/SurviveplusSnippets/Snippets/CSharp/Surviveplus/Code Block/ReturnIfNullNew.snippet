@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>ReturnIfNullNew</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>Initialize new instance when a variable is null reference, and return it.</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>returnIfNullNew</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>new</ID>
+          <ToolTip>new</ToolTip>
+          <Default>new Object()</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>member</ID>
+          <ToolTip>member</ToolTip>
+          <Default>member</Default>
+          <Function>
+          </Function>
+          <Type>
+          </Type>
+        </Object>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[			if (this.$member$ == null) {
+				this.$member$ = $new$;
+			} // end if
+			return this.$member$;$end$
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

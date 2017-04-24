@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Dipose</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>Define logic of IDisposable implementation.</Description>
+      <Shortcut>dispose</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="VB" Kind="method decl"><![CDATA[#Region " IDisposable Members "
+
+    ''' <summary>
+    ''' Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public Sub Dispose() Implements IDisposable.Dispose
+        ' Don't change this code. Define the code of cleaning up in Dispose(ByVal disposing As Boolean) method.
+        Me.Dispose(True)
+        GC.SuppressFinalize(Me)
+    End Sub
+
+    ''' <summary>
+    '''  Backing field to track whether Dispose has been called.
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private disposedValue As Boolean = False
+
+    ''' <summary>
+    ''' Dispose managed and unmanaged resources of this instance.
+    ''' </summary>
+    ''' <param name="disposing">If disposing equals true, managed and unmanaged resources can be disposed. If disposing equals false, only unmanaged resources can be disposed.</param>
+    ''' <remarks></remarks>
+    Protected Overridable Sub Dispose(ByVal disposing As Boolean)
+        If Not Me.disposedValue Then
+            If disposing Then
+                ' TODO: Dispose managed resources.
+            End If
+
+            ' TODO: Dispose unmanaged resources.
+        End If
+        Me.disposedValue = True
+    End Sub
+
+#End Region]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

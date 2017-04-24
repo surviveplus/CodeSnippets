@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Singleton</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>Code snippet for a Extension method to return the IEnumerable&amp;lt;T&amp;gt; which contains only this instance.</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>
+      </Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="csharp" Delimiter="$"><![CDATA[	/// <summary>
+	/// Static class which is defined extension methods for System.Object.
+	/// </summary>
+	public static partial class ObjectExtensions
+	{
+		/// <summary>
+		/// Return the IEnumerable&lt;T&gt; which contains only this instance.
+		/// </summary>
+		/// <typeparam name="T">The type of this instance.</typeparam>
+		/// <param name="me">The instance of the type which is added this extension method. Set a null reference (Nothing in Visual Basic), to return empty IEnumerable&lt;T&gt;.</param>
+		/// <returns>Return the IEnumerable&lt;T&gt; which contains only this instance.</returns>
+		/// <remarks>
+		/// <para>In this sample code, list is IEnumerable&lt;int&gt;.</para>
+		/// <code>
+		/// int a = 0;
+		/// var list = a.Singleton();
+		/// </code>
+		/// </remarks>
+		public static IEnumerable<T> Singleton<T>( this T me ) {
+
+			if (me != null) {
+				yield return me;
+			} // end if
+
+		} // end function
+	} // end class]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

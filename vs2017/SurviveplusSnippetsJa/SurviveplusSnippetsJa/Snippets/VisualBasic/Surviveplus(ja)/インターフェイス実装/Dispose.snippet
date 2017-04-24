@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Dipose</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>IDisposable メンバを実装するコードです。</Description>
+      <Shortcut>dispose</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="VB" Kind="method decl"><![CDATA[#Region " IDisposable メンバ "
+
+    ''' <summary>
+    ''' アンマネージ リソースの解放およびリセットに関連付けられているアプリケーション定義のタスクを実行します。
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public Sub Dispose() Implements IDisposable.Dispose
+        ' このコードを変更しないでください。クリーンアップ コードを Dispose(ByVal disposing As Boolean) に記述します。
+        Me.Dispose(True)
+        GC.SuppressFinalize(Me)
+    End Sub
+
+    ''' <summary>
+    ''' 重複する呼び出しを検出するために使用されるバッキングフィールドです。
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private disposedValue As Boolean = False
+
+    ''' <summary>
+    ''' インスタンスが使用しているアンマネージオブジェクト、およびマネージオブジェクトを解放します。
+    ''' </summary>
+    ''' <param name="disposing">マネージオブジェクトを明示的に解放する時は True を指定します。それ以外は False を指定します。</param>
+    ''' <remarks></remarks>
+    Protected Overridable Sub Dispose(ByVal disposing As Boolean)
+        If Not Me.disposedValue Then
+            If disposing Then
+                ' TODO: 他の状態を解放します (マネージ オブジェクト)。
+            End If
+
+            ' TODO: ユーザー独自の状態を解放します (アンマネージ オブジェクト)。
+            ' TODO: 大きなフィールドを null に設定します。
+        End If
+        Me.disposedValue = True
+    End Sub
+
+#End Region]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

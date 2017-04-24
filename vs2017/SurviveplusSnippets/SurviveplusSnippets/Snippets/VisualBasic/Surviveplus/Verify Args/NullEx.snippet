@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Throw Exception when argument is a null reference</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>Insert a code to verify the argument and throw the exception when it is Nothing (a null reference in C#).</Description>
+      <Shortcut>NullEx</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>ArgumentName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of argument.</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[If $ArgumentName$ Is Nothing Then Throw New ArgumentNullException("$ArgumentName$")]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

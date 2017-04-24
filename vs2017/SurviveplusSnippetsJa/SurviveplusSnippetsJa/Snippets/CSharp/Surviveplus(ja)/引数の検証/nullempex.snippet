@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>引数が 空文字・null参照 は例外</Title>
+			<Shortcut>nullempex</Shortcut>
+      <Description>引数が空文字、あるいは null 参照 (Visual Basic の場合は Nothing) かどうか検証し、例外をスローするコードを記述します。</Description>
+      <Author>Surviveplus.net</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+        <Literal>
+          <ID>ArgumentName</ID>
+          <Type>String</Type>
+          <ToolTip>引数の名称で置き換えます。</ToolTip>
+          <Default>value</Default>
+        </Literal>
+			</Declarations>
+			<Code Language="csharp">
+        <![CDATA[if ( string.IsNullOrEmpty( $ArgumentName$ ) ) throw new ArgumentException( "$ArgumentName$ に Empty 文字、および null 参照 (Visual Basic の場合は Nothing) を指定することは出来ません。", "$ArgumentName$" );$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

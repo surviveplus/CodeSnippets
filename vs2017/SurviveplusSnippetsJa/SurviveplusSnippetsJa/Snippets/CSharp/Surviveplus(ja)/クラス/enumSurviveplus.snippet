@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>列挙体</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>列挙体に対するコードスニペット</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>enumSurviveplus</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Name</ID>
+          <ToolTip>列挙体の名前を指定します。</ToolTip>
+          <Default>	SomethingKind</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Description</ID>
+          <ToolTip>列挙体の使用用途を説明する文章や名前を指定します。</ToolTip>
+          <Default>何かに使用する値</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[	/// <summary>
+	/// $Description$の種類を表す列挙体です。
+	/// </summary>
+	public enum $Name$
+	{
+		/// <summary>
+		/// 指定無し、あるいは不明を表します。
+		/// </summary>
+		None,
+		$end$
+	} // end enum
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

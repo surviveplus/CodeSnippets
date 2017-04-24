@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>引数が使用できない列挙型は例外</Title>
+			<Shortcut>outenumex</Shortcut>
+			<Description>引数が使用できる列挙型かどうか検証し、例外をスローするコードを記述します。</Description>
+      <Author>Surviveplus.net</Author>
+      <SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>value</ID>
+					<ToolTip>引数の変数を指定します。2回とも同じ変数を指定してください。</ToolTip>
+					<Default>value</Default>
+				</Literal>
+        <Literal>
+          <ID>value2</ID>
+          <ToolTip>引数の変数を指定します。2回とも同じ変数を指定してください。</ToolTip>
+          <Default>value</Default>
+        </Literal>        
+				<Literal Editable="false">
+					<ID>cases</ID>
+					<Function>GenerateSwitchCases($value$)</Function>
+					<Default>default:</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+  <![CDATA[#region 引数 $value2$ の検証
+  
+  // 使用できる値は何もしません。使用できない値は例外をスローします。
+  switch ($value$)
+	{
+		$cases$ // TODO: 重複する default: と、使用できない値の case を削除します。
+				$end$
+		default:
+				throw new ArgumentOutOfRangeException("$value2$", "サポートされていない値を指定することは出来ません。");
+
+}
+#endregion]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

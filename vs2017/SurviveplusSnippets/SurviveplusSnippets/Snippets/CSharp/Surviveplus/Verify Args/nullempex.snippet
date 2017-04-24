@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Throw Exception when argument is the empty string or a null reference</Title>
+			<Shortcut>nullempex</Shortcut>
+      <Description>Insert a code to verify the argument and throw the exception when it is the empty string or a null reference (Nothing in Visual Basic).</Description>
+      <Author>Surviveplus.net</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+        <Literal>
+          <ID>ArgumentName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of argument.</ToolTip>
+          <Default>value</Default>
+        </Literal>
+			</Declarations>
+			<Code Language="csharp">
+        <![CDATA[if ( string.IsNullOrEmpty( $ArgumentName$ ) ) throw new ArgumentException( "Cannot provide the empty string or a null reference (Nothing in Visual Basic) to $ArgumentName$.", "$ArgumentName$" );$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

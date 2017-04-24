@@ -1,0 +1,8 @@
+﻿// Visual Basic
+[$RootKey$\Languages\CodeExpansions\Basic\Paths]
+"Surviveplus Visual Basic"="$PackageFolder$\Snippets\VisualBasic\Surviveplus"
+
+// C#
+[$RootKey$\Languages\CodeExpansions\CSharp\Paths]
+"Surviveplus Visual C#"="$PackageFolder$\Snippets\CSharp\Surviveplus"
+

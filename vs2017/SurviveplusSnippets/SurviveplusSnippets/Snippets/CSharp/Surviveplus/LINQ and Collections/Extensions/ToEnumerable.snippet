@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>ToEnumerable</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>Code snippet for a Extension method to return the IEnumerable&amp;lt;T&amp;gt; for a classic collection that do not implement IEnumerable&amp;lt;T&amp;gt; but it is possible to be set on foreach.</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>
+      </Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Object Editable="true">
+          <ID>Object</ID>
+          <ToolTip>Keep Object, or replace with the type of this collection.</ToolTip>
+          <Default>Object</Default>
+          <Function>
+          </Function>
+          <Type>
+          </Type>
+        </Object>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[	/// <summary>
+	/// Static class which is defined extension methods for $Object$.
+	/// </summary>
+	public static partial class $Object$Extensions {
+
+		/// <summary>
+		/// Return the IEnumerable&lt;T&gt; for a classic collection that do not implement IEnumerable&lt;T&gt; but it is possible to be set on foreach.
+		/// </summary>
+		/// <typeparam name="T">The type of this elements.</typeparam>
+		/// <param name="me">The instance of the type which is added this extension method. Set a null reference (Nothing in Visual Basic), to return empty IEnumerable&lt;T&gt;.</param>
+		/// <returns>
+		/// Return the IEnumerable&lt;T&gt;.
+		/// </returns>
+		public static IEnumerable<T> ToEnumerable<T>( this $Object$ me ) {
+			if (me != null) {
+				dynamic list = me;
+
+				foreach (T item in list) {
+					yield return item;
+				} // next item
+			} // end if
+
+		} // end function
+	} // end class]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

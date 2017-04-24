@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>testMethod</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>テストメソッドを定義します。</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>testMethod</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualStudio.TestTools.UnitTesting</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Diagnostics.CodeAnalysis</Namespace>
+        </Import>
+      </Imports>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.VisualStudio.TestTools.UnitTesting</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Diagnostics.CodeAnalysis</Assembly>
+        </Reference>
+      </References>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>MethodName</ID>
+          <ToolTip>MethodName</ToolTip>
+          <Default>MethodName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>TestType</ID>
+          <ToolTip>正常系</ToolTip>
+          <Default>正常系</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>DescriptionText</ID>
+          <ToolTip>条件のとき結果になること</ToolTip>
+          <Default>条件のとき結果になること</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[		[TestMethod()]
+		#region コード分析（命名規則）抑制
+		[SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly"), 
+		  SuppressMessage("Microsoft.Naming", "CA1707:IdentifiersShouldNotContainUnderscores"),
+		  SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly")]
+		#endregion
+		public void $MethodName$_$TestType$_$DescriptionText$() {
+			$end$
+		} // end function]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

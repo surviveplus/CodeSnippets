@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="b0e5a9c4-cf2f-4720-b944-e37d502c6479" Version="1.10.6.1" Language="ja-JP" Publisher="Surviveplus.net" />
+    <DisplayName>Surviveplus Code Snippets (Japanese2017) </DisplayName>
+    <Description xml:space="preserve">Surviveplus.net 開発チームが使用している Visual Studio  用のコードスニペットです。このスニペットは日本語用で、他に英語用があります。</Description>
+    <MoreInfo>https://github.com/surviveplus/CodeSnippets</MoreInfo>
+    <Icon>SurviveplusSnippets-32.png</Icon>
+    <PreviewImage>SurviveplusSnippets-200.png</PreviewImage>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0]" />
+  </Installation>
+  <Dependencies>
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="registry.pkgdef" />
+  </Assets>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,16.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+</PackageManifest>

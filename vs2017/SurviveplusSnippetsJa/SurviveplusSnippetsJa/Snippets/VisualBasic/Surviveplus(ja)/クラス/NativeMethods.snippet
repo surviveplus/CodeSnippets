@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>NativeMethods</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>Windows API 実装クラス</Description>
+      <Shortcut>native</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="VB" Kind="type decl"><![CDATA[''' <summary>
+    ''' プラットフォーム呼び出しサービスを使用してアンマネージ コードにアクセスするためのクラスです。
+    ''' </summary>
+    Friend NotInheritable Class NativeMethods
+
+#Region " コンストラクタ（インスタンスを初期化できません） "
+
+        Private Sub New()
+        End Sub
+
+#End Region
+
+#Region " Win32API 定義 "
+
+        ' TODO: ここに Declare や DllImport を記述します。（コード分析 CA1060 参照）
+
+#End Region
+
+    End Class]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>プロパティ</Title>
+      <Author>Surviveplus.net</Author>
+      <Description>バッキング フィールドを伴うプロパティを定義します。</Description>
+      <Shortcut>PropFull</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>PropertyName</ID>
+          <Type>String</Type>
+          <ToolTip>プロパティ名で置き換えます。</ToolTip>
+          <Default>NewProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>PropertyType</ID>
+          <Type>
+          </Type>
+          <ToolTip>プロパティの型で置き換えます。</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Literal>
+          <ID>Explanation</ID>
+          <Type>String</Type>
+          <ToolTip>プロパティの内容を表現するテキストで置き換えます。</ToolTip>
+          <Default>値</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[''' <summary>
+''' $PropertyName$ プロパティのバッキングフィールドです。
+''' </summary>
+''' <remarks></remarks>        
+Private valueOf$PropertyName$ As $PropertyType$
+
+''' <summary>
+''' $Explanation$を取得または設定します。
+''' </summary>
+''' <remarks></remarks>
+Public Property $PropertyName$() As $PropertyType$
+    Get
+        Return Me.valueOf$PropertyName$
+    End Get
+    Set(ByVal value As $PropertyType$)
+        Me.valueOf$PropertyName$ = value
+    End Set
+End Property]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
