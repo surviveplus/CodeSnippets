@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{841AF38C-742A-4FA6-9BB5-D6789BAF7393}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSharp</RootNamespace>
+    <AssemblyName>CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="クラス\enum.cs" />
+    <Compile Include="クラス\class.cs" />
+    <Compile Include="クラス\exception.cs" />
+    <Compile Include="クラス\native.cs" />
+    <Compile Include="コードブロック\disposeIfNotNull.cs" />
+    <Compile Include="コードブロック\ReturnIfNullNew.cs" />
+    <Compile Include="イベント\拡張メソッド定義\RaiseEvent.cs" />
+    <Compile Include="インターフェイス実装\dispoase.cs" />
+    <Compile Include="LINQとコレクション\拡張メソッド定義\DirectoryInfoRecursion.cs" />
+    <Compile Include="LINQとコレクション\拡張メソッド定義\ForEach.cs" />
+    <Compile Include="LINQとコレクション\拡張メソッド定義\Singleton.cs" />
+    <Compile Include="LINQとコレクション\拡張メソッド定義\ToEnumerable.cs" />
+    <Compile Include="LINQとコレクション\linq.cs" />
+    <Compile Include="LINQとコレクション\RecursionLambda.cs" />
+    <Compile Include="メソッド\ctor.cs" />
+    <Compile Include="メソッド\extensions.cs" />
+    <Compile Include="メソッド\extensionsWithNameSpace.cs" />
+    <Compile Include="メソッド\tostring.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="プロパティ\propfull.cs" />
+    <Compile Include="プロパティ\propgfull.cs" />
+    <Compile Include="引数の検証\notenumex.cs" />
+    <Compile Include="引数の検証\nullempex.cs" />
+    <Compile Include="引数の検証\nullex.cs" />
+    <Compile Include="引数の検証\nullwex.cs" />
+    <Compile Include="引数の検証\outenumex.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
