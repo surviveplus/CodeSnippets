@@ -10,8 +10,7 @@
         <PreviewImage>SurviveplusSnippets-200.png</PreviewImage>
     </Metadata>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0]" />
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0]" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,17.0)" />
     </Installation>
     <Dependencies>
     </Dependencies>
